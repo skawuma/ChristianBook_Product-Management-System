@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class ProcessEachUrlData {
-
+//single thread
 //    @Async
 //    public void processEachUrl() {
 //        System.out.println("========== Processing started =======================");

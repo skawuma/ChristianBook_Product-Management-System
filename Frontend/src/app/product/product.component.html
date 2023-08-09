@@ -1,0 +1,26 @@
+<form (ngSubmit)="onSubmit()" role="search">
+    <label for="search">Search for product</label>
+    <input name=search id="search" type="search" placeholder="Search..." autofocus required [(ngModel)]="search" />
+    <button type="submit">Go</button>
+</form>
+<span *ngIf="hideOrShow === false">
+    <table style="margin-top: 5%;">
+        <tr>
+            <th>Details:-</th>
+        </tr>
+        <tr>
+            <td>Authos:
+                <span *ngFor="let authos of response?.authos;let last = last">
+                    {{authos}}
+                    <span *ngIf="!last">,</span>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>Titla: {{response?.titla}}</td>
+        </tr>
+        <tr>
+            <td>Price: {{response?.price}}</td>
+        </tr>
+    </table>
+    <span>
